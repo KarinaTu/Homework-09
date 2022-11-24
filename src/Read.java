@@ -7,22 +7,23 @@ public class Read {
             System.out.println("What's your name?");
             String first = scanner.nextLine();
             System.out.println("What's you age?");
-            int second = scanner.nextInt();
+            int second = Integer.parseInt(scanner.nextLine());
             if(second<0){
                 System.out.println("Age must be positive number");
                 break;
             }
             System.out.println("Your name is: " +first+ " Your age is: "+ second);
             System.out.println("Do you want to continue?");
-            Scanner newscanner = new Scanner(System.in);
-            String answer = newscanner.nextLine();
+            //Scanner newscanner = new Scanner(System.in);
+            String answer = scanner.nextLine();
             if(answer.equals("no")){
                 break;
             } else if(answer.equals("yes")){
                 continue;
+            } else {
+                System.out.println("Answer has to be yes/no");
+                break;
             }
-            System.out.println("Answer has to be yes/no");
-            break;
 
         }
 
